@@ -4,6 +4,7 @@ import Image from 'next/image';
 import HeroImgScroller from '../components/homePage/HeroImgScroller';
 import HowItWorks from '../components/homePage/HowItWorks';
 import RecentListing from '../components/homePage/RecentListing';
+import StartListing from '../components/homePage/StartListing';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <HeroImgScroller />
       <HowItWorks />
       <RecentListing />
+      <StartListing />
       
       
       
