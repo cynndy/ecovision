@@ -2,14 +2,14 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-const sunglasses = () => {
+const glasses = () => {
   return (
     <div>
         <Header />
-        This is Sun Glasses Page
+        This is Glasses Page
         <Footer />
     </div>
   )
 }
 
-export default sunglasses
+export default glasses

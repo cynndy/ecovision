@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image';
+import Image from 'next/image'
+import Footer from '../components/Footer';
+import Header from "../components/Header";
 import HeroImgScroller from '../components/homePage/HeroImgScroller';
 import HowItWorks from '../components/homePage/HowItWorks';
 import RecentListing from '../components/homePage/RecentListing';
@@ -12,11 +14,11 @@ const Home: NextPage = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+      <Header/>
       <HeroImgScroller />
       <HowItWorks />
       <RecentListing />
-      
+      <Footer />
       
       
      <footer className="flex h-24 w-full items-center justify-center border-t">

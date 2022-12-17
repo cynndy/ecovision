@@ -1,8 +1,13 @@
+import React from 'react'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const myListing = () => {
   return (
     <div>
-       this is my listing
+        <Header />
+        myListing
+        <Footer />
         </div>
   )
 }

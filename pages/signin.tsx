@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../components/Layouts/Footer'
-import Header from '../components/Navbar'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 const signin = () => {
   return (
