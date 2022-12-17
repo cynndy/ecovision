@@ -1,8 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import sunglass1 from '../public/sunglass1.png'
-import sunglass2 from '../public/sunglass2.png'
-import sunglass3 from '../public/sunglass3.png'
 
 function HowItWorks () {
     return (
@@ -12,7 +9,7 @@ function HowItWorks () {
             </h1>
         <div className="flex flex-row space-x-10">
             <div className="inline-block ml-4">
-            <Image src={sunglass1} alt='/' width={250} height={300} />
+            <Image src="/sunglass1.png" alt='/' width={250} height={300} />
             <div className='inline-block'>
             <h3 className="mt-4 text-sm font-bold text-black text-center">
                 Sell and Declutter
@@ -24,7 +21,7 @@ function HowItWorks () {
             </div>
             </div>
             <div className="inline-block">
-            <Image src={sunglass2} alt='/' width={250} height={300} />
+            <Image src="/sunglass2.png" alt='/' width={250} height={300} />
             <div className='inline-block'>
             <h3 className="mt-4 text-sm font-bold text-black text-center">
                 Find Good Deals
@@ -35,7 +32,7 @@ function HowItWorks () {
             </div>
             </div>
             <div className="inline-block mr-4">
-            <Image src={sunglass3} alt='/' width={250} height={300} />
+            <Image src="/sunglass3.png" alt='/' width={250} height={300} />
             <div className='inline-block'>
             <h3 className="mt-4 text-sm font-bold text-black text-center">
                 Ask Questions

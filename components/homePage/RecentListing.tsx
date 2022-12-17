@@ -1,8 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import glass1 from '../public/glass1.png'
-import glass2 from '../public/glass2.png'
-import glass3 from '../public/glass3.png'
 
 
 
@@ -18,7 +15,7 @@ function RecentListing () {
             </h4>
             <div className="flex flex-row space-x-7">
             <div className="inline-block text-center">
-                <Image src={glass1} alt='/' width={250} height={250} />
+                <Image src="/glass1.png" alt='/' width={250} height={250} />
             <div className='inline-block'>
             <h3 className="mt-4 text-sm font-bold text-black">
                 Gentle Monster Sunglasses
@@ -30,7 +27,7 @@ function RecentListing () {
             </div>
             </div>
             <div className="inline-block text-center">
-                <Image src={glass2} alt='/' width={250} height={250} />
+                <Image src="/glass2.png" alt='/' width={250} height={250} />
             <div className='inline-block'>
             <h3 className="mt-4 text-sm font-bold text-black ">
                 Yellow Sunglasses
@@ -42,7 +39,7 @@ function RecentListing () {
             </div>
             </div>
             <div className="inline-block text-center">
-                <Image src={glass3}  alt='/' width={250} height={250} />
+                <Image src="/glass3.png"  alt='/' width={250} height={250} />
             <div className='inline-block'>
             <h3 className="mt-4 text-sm font-bold text-black ">
                 Plain Glasses
