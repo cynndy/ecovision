@@ -1,27 +1,131 @@
-# Next.js + Tailwind CSS Example
+# ecovision-backend
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## API Routes for User
+<table>
+<thead>
+    <tr>
+        <th>Route</th>
+        <th>Method</th>
+        <th>Payload</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><code>/api/users/register</code></td>
+        <td><code>POST</code></td>
+        <td>
+            <ul>
+                <li><code>name</code></li>
+                <li><code>email</code></li>
+                <li><code>password</code></li>
+            </ul>
+        </td>
+        <td>This is for user registration</td>
+    </tr>
+    <tr>
+        <td><code>/api/users/login</code></td>
+        <td><code>POST</code></td>
+        <td>
+            <ul>
+                <li><code>email</code></li>
+                <li><code>password</code></li>
+            </ul>
+        </td>
+        <td>This is for user login</td>
+    </tr>
+    <tr>
+        <td><code>/api/users/logout</code></td>
+        <td><code>POST</code></td>
+        <td></td>
+        <td>This is for user logout</td>
+    </tr>
+    <tr>
+        <td><code>/api/users/details</code></td>
+        <td><code>GET</code></td>
+        <td>
+            <ul>
+                <li><code>email</code></li>
+            </ul>
+        </td>
+        <td>This is for user details</td>
+    </tr>
+</tbody>
+<table>
+<hr>
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Api Routes for Listings
+<table>
+<thead>
+    <tr>
+        <th>Route</th>
+        <th>Method</th>
+        <th>Payload</th>
+        <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><code>/api/listings</code></td>
+        <td><code>GET</code></td>
+        <td></td>
+        <td>Fetch all listing records</td>
+    </tr>
+    <tr>
+        <td><code>/api/listings</code></td>
+        <td><code>POST</code></td>
+        <td>
+            <ul>
+                <li><code>category</code> (string)</li>
+                <li><code>title</code> (string)</li>
+                <li><code>condition</code> (string)</li>
+                <li><code>price</code> (number)</li>
+                <li><code>description</code> (string)</li>
+                <li><code>photos</code> (array of images)</li>
+                <li><code>shipping</code> (string)</li>
+                <li><code>payment</code> (string)</li>
+            </ul>
+        </td>
+        <td>Add a listing</td>
+    </tr>
+    <tr>
+        <td><code>/api/listings/{:id}</code></td>
+        <td><code>GET</code></td>
+        <td>
+            <ul>
+                <li><code>id</code> (string) - sample of unique id in firebase database <code>-NIz4gjbTT2lYsKVH4lL</code></li>
+            </ul>
+        </td>
+        <td>Fetch a listing and get its details</td>
+    </tr>
+    <tr>
+        <td><code>/api/listings/{:id}</code></td>
+        <td><code>PUT</code></td>
+        <td>
+            <ul>
+                <li><code>id</code> (string) - sample of unique id in firebase database <code>-NIz4gjbTT2lYsKVH4lL</code></li>
+                <li><code>category</code> (string)</li>
+                <li><code>title</code> (string)</li>
+                <li><code>condition</code> (string)</li>
+                <li><code>price</code> (number)</li>
+                <li><code>description</code> (string)</li>
+                <li><code>photos</code> (array of images)</li>
+                <li><code>shipping</code> (string)</li>
+                <li><code>payment</code> (string)</li>
+            </ul>
+        </td>
+        <td>Find the listing based on the unique <code>id</code> and then <code>update</code> it</td>
+    </tr>
+    <tr>
+        <td><code>/api/listings/{:id}</code></td>
+        <td><code>DELETE</code></td>
+        <td>
+            <ul>
+                <li><code>id</code> (string) - sample of unique id in firebase database <code>-NIz4gjbTT2lYsKVH4lL</code></li>
+            </ul>
+        </td>
+        <td>Find the listing and then <code>delete</code> it</td>
+    </tr>
+</thead>
+</tbody>
+</table>
