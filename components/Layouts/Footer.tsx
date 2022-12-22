@@ -1,10 +1,18 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div><Image className='w-100%  object-cover' src="/Footer.png" alt="Footer will be Here soon" width={800} height={50} /></div>
-  )
-}
+    <div className="flex justify-center w-full">
+      <Image
+        className="object-cover w-full"
+        src="/Footer.png"
+        alt="Footer will be Here soon"
+        width={1440}
+        height={389}
+      />
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
