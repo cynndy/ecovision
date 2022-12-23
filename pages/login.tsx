@@ -35,7 +35,7 @@ const Login = () => {
         const response = await axios.post('/api/auth/login', data);
         if(response.data.success){
 
-            router.push('/myListing')
+            router.push('/my-listing')
         }
     }
 

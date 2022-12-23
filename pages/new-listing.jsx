@@ -113,7 +113,7 @@ const NewListing = () => {
                             showConfirmButton: false,
                             timer: 3000
                         }).then(() => {
-                            router.push('/myListing')
+                            router.push('/my-listing')
                         })
                     }
                 })
