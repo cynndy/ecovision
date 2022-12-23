@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const navs = [
     { title: 'Home', path: '/'},
-    { title: 'Prescription Glasses', path: '/prescription-glasses'},
-    { title: 'Sunglasses', path: '/sunglasses'},
-    { title: 'List an Eyewear', path: '/list-an-eyewear'},
+    { title: 'Browse eyewear', path: '/browse-eyewear'},
+    { title: 'List eyewear', path: '/list-eyewear'},
+    // { title: 'List an Eyewear', path: '/list-an-eyewear'},
 ]
 
 const Header = (props : any) => {
@@ -23,9 +23,9 @@ const Header = (props : any) => {
         authentication = <>
             <div className="user">
                 <Image src="https://ui-avatars.com/api/?length=1&name=robert&background=6A983C&bold=true&rounded=true&color=ffffff"
-                    alt="Profile picture"
-                    width={32}
-                    height={32} />
+                        alt="Profile picture"
+                        width={32}
+                        height={32} />
             </div>
         </>
     }
@@ -36,12 +36,12 @@ const Header = (props : any) => {
             <div className="w-full">
                 <nav className="flex items-center justify-between">
                     <div className="flex items-center">
-                        <h1>
+                        <Link href="/">
                             <Image src="/ecovision.svg" 
                                 alt="branding logo" 
                                 width={188} 
                                 height={72} />
-                        </h1>
+                        </Link>
                         <div className="grow">
                             <div className="flex items-center justify-start gap-2 md:gap-8">
                                 {navs.map((item, index) => {
