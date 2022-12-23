@@ -61,7 +61,7 @@ const Header = (props : any) => {
         }else{
             return (
                 <div className="flex items-center justify-start gap-2 md:gap-8">
-                    <Link href="/myListing" 
+                    <Link href="/my-listing" 
                         className="font-semibold text-gray-500"
                         type="button">My Listing</Link>
                     <Link href="/myListing" 
