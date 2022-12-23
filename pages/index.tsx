@@ -3,7 +3,7 @@ import HeroImgScroller from '../components/homePage/HeroImgScroller';
 import HowItWorks from '../components/homePage/HowItWorks';
 import RecentListing from '../components/homePage/RecentListing';
 import StartListing from '../components/homePage/StartListing';
-import Layout from '../components/Layouts/BaseLayout';
+import Layout from '../components/Layouts/Layout';
 import Footer from '../components/Layouts/Footer';
 
 const Home: NextPage = () => {
