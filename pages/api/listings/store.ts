@@ -16,12 +16,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         headers: {
             "Content-Type": "application/json",
         }
+    }).then(res => res.json())
+    .then(response => {
+        if(!response.success) {
+            return res.status(400).json(response)
+        }
+    
+        return res.status(200).json(response)
     })
-
-    const response = await rawResponse.json()
-    if(!response.success) {
-        return res.status(400).json(response)
-    }
-
-    return res.status(200).json(response)
+    .catch(err => res.status(400).json(err))
 }
