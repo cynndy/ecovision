@@ -5,12 +5,6 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { sign } from 'jsonwebtoken'
 import { serialize } from 'cookie'
 
-// type Data = {
-//   email: string,
-//   password: string,
-//   remember: boolean
-// }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const SECRET = process.env.JWT_SECRET
 

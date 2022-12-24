@@ -14,12 +14,6 @@ const firebaseStorage = getStorage(firebase, 'gs://ecovision-f0d90.appspot.com')
 // * components
 import Layout from '../components/Layouts/Layout'
 import Swal from 'sweetalert2'
-// import Input from '../components/form-inputs/BaseInput'
-// import Select from '../components/form-inputs/BaseSelect'
-// import Textarea from '../components/form-inputs/BaseTextarea'
-// import FileUpload from '../components/form-inputs/BaseFileUpload'
-// import Radio from '../components/form-inputs/BaseRadio'
-
 
 const categories = [
     { value: "prescription-glasses", text: "Prescription Glasses" },
@@ -35,7 +29,7 @@ const conditions = [
 ];
 
 const NewListing = () => {
-    // const router = useRouter()
+    const router = useRouter()
     const { register, handleSubmit, formState: {errors} } = useForm();
     const inputElement = useRef(null);
 
@@ -101,7 +95,6 @@ const NewListing = () => {
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 let params = { category, title, condition, price, description, photo: downloadURL, shipping, payment }
-                console.log(params)
 
                 axios.post('/api/listings/store', params).then(res => {
                     if(res.data.success){
@@ -109,11 +102,11 @@ const NewListing = () => {
                             position: 'top-end',
                             icon: 'success',
                             title: 'Success',
-                            text: response.data.message,
+                            text: res.data.message,
                             showConfirmButton: false,
                             timer: 3000
                         }).then(() => {
-                            router.push('/myListing')
+                            router.push('/my-listing')
                         })
                     }
                 })
